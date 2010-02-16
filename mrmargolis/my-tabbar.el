@@ -1,15 +1,6 @@
-;;use tabbar (found it in debian emacs-goodies package)
-;;found this code to hide special buffers on http://www.emacswiki.org/emacs/TabBarMode
-(when (require 'tabbar nil t)
-;;      (setq tabbar-buffer-groups-function
-;;    	(lambda () (list "All Buffers")))
-;;      (setq tabbar-buffer-list-function
-;;    	(lambda ()
-;;    	  (remove-if
-;;    	   (lambda(buffer)
-;;    	     (find (aref (buffer-name buffer) 0) " *"))
-;;    	   (buffer-list))))
-      (tabbar-mode))
+;;use tabbar 2 (found it in debian emacs-goodies package)
+(require 'tabbar)
+(tabbar-mode 1)
 
 (defun tabbar-buffer-groups ()
    "Return the list of group names the current buffer belongs to.
