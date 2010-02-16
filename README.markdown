@@ -1,3 +1,13 @@
+# Differences from upstream Emacs Starter Kit
+* Using Emacs 23 for OS X.
+* Added tabbar 2
+* Change paths so magit can find git
+* Added line numbers to left side of buffers
+* Keep all backups in one place
+* Lots of other stuff (eventually)  
+  look at mrmargolis.el and /mrmargolis for more information
+
+
 # Emacs Starter Kit
 
 The Starter Kit should provide a saner set of defaults than you get
