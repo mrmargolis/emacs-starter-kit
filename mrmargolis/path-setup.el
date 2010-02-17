@@ -8,5 +8,7 @@
                      "/usr/bin:"
                      "/bin"))
 (setenv "PATH" path))
-;; used for magit, otherwise it doesn't find git for some reason
-(setq exec-path (append exec-path '("/usr/local/git/bin")))
+;; need to expand our exec-path so we can find git, ispell, and other
+;; useful programs
+(setq exec-path (append exec-path (split-string (getenv "PATH") ":" )  ))
+
