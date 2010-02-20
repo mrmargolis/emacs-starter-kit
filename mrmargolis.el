@@ -10,6 +10,11 @@
 (add-to-list 'load-path (concat dotfiles-dir "/vendor"))
 (add-to-list `load-path (concat dotfiles-dir "/mrmargolis"))
 
+;;trying out Steve Yegge's suggestion
+(global-set-key "\C-w" 'backward-kill-word)
+(global-set-key "\C-x\C-k" 'kill-region)
+(global-set-key "\C-c\C-k" 'kill-region)
+
 
 (defun bf-pretty-print-xml-region (begin end)
   "Pretty format XML markup in region. You need to have nxml-mode
