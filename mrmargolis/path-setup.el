@@ -1,6 +1,7 @@
 ;; Manually set PATH for use by eshell, rspec-mode, etc.
 (let ((path))
   (setq path (concat "/Users/mrmargolis/.rvm/ree-1.8.7-20090928/bin:"
+                     "/Users/mrmargolis/.rvm/gems/ree/1.8.7/bin/:"
                      "/usr/local/git/bin:"
                      "~/bin:"
                      "/usr/local/usr:"
