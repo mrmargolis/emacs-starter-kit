@@ -46,3 +46,18 @@ by using nxml's indentation rules."
     (if mark-active (list (region-beginning) (region-end))
       (list (line-beginning-position)
         (line-beginning-position 2)))))
+
+
+
+
+(add-to-list `load-path  "~/.emacs.d/vendor/apel")
+(load "elscreen" "ElScreen" )
+
+;; create or destroy elscreens
+(global-set-key (kbd "<C-f9>"    ) 'elscreen-create)
+(global-set-key (kbd "M-<f9>"  ) 'elscreen-kill)  
+
+
+;; switching between elscreens
+(global-set-key (kbd "<M-S-left>") 'elscreen-previous) 
+(global-set-key (kbd "<M-S-right>")  'elscreen-next) 
