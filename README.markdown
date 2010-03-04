@@ -1,6 +1,5 @@
 # Differences from upstream Emacs Starter Kit
 * Using Emacs 23 for OS X.
-* Added tabbar 2
 * Change paths so magit can find git
 * Added line numbers to left side of buffers
 * Keep all backups in one place
