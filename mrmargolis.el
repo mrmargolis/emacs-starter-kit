@@ -61,3 +61,14 @@ by using nxml's indentation rules."
 ;; switching between elscreens
 (global-set-key (kbd "<M-S-left>") 'elscreen-previous) 
 (global-set-key (kbd "<M-S-right>")  'elscreen-next) 
+
+
+;;eproject config
+(load "eproject/eproject")
+(load "eproject/eproject-extras")
+
+ (define-project-type merb-or-rails (generic)
+   (look-for "app")
+   :relevant-files ("\\.rb$" "\\.yml$" "\\.html$" "\\Rakefile$" "\\.feature$" "\\.sass$" "\\.js$"))
+
+(global-set-key "\C-c\C-p" 'eproject-revisit-project)
