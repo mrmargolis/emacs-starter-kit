@@ -49,14 +49,13 @@ by using nxml's indentation rules."
 
 
 
-
-(add-to-list `load-path  "~/.emacs.d/vendor/apel")
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/apel"))
 (load "elscreen" "ElScreen" )
+
 
 ;; create or destroy elscreens
 (global-set-key (kbd "<C-f9>"    ) 'elscreen-create)
 (global-set-key (kbd "M-<f9>"  ) 'elscreen-kill)  
-
 
 ;; switching between elscreens
 (global-set-key (kbd "<M-S-left>") 'elscreen-previous) 
@@ -64,11 +63,20 @@ by using nxml's indentation rules."
 
 
 ;;eproject config
-(load "eproject/eproject")
-(load "eproject/eproject-extras")
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/eproject"))
+(require `eproject)
+(require `eproject-extras)
 
  (define-project-type merb-or-rails (generic)
    (look-for "app")
    :relevant-files ("\\.rb$" "\\.yml$" "\\.html$" "\\Rakefile$" "\\.feature$" "\\.sass$" "\\.js$"))
 
 (global-set-key "\C-c\C-p" 'eproject-revisit-project)
+
+
+
+;;yasnippet
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/yasnippet"))
+(require 'yasnippet) 
+(yas/initialize)
+(yas/load-directory "~/.emacs.d/vendor/yasnippet/snippets")
