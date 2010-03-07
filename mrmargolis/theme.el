@@ -60,7 +60,8 @@
 "black")))) 
      (flymake-warnline ((t (:background "LightSteelBlue" :foreground 
 "black")))) 
-     (underline ((t (:underline t)))) 
+     (underline ((t (:underline t))))
+     (org-hide ((t (:foreground "#2e3436")))) 
      (minibuffer-prompt ((t (:bold t :foreground "#ff6600")))))))
 
 (color-theme-vibrant-ink)

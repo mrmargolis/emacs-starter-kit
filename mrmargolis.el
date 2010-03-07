@@ -80,3 +80,6 @@ by using nxml's indentation rules."
 (require 'yasnippet) 
 (yas/initialize)
 (yas/load-directory "~/.emacs.d/vendor/yasnippet/snippets")
+
+;;hide leading stars in org mode
+(setq org-hide-leading-stars t)
