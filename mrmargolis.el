@@ -1,4 +1,4 @@
-;;Use command as meta
+;;Use command as meta    
 (setq mac-command-modifier 'meta)
 
 
@@ -81,5 +81,4 @@ by using nxml's indentation rules."
 (yas/initialize)
 (yas/load-directory "~/.emacs.d/vendor/yasnippet/snippets")
 
-;;hide leading stars in org mode
-(setq org-hide-leading-stars t)
+
