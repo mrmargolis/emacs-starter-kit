@@ -101,3 +101,5 @@ by using nxml's indentation rules."
 (yas/load-directory "~/.emacs.d/vendor/yasnippet/snippets")
 
 
+;;newer nXhtml
+(load "~/.emacs.d/vendor/nxhtml/autostart.el")
