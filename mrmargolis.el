@@ -16,6 +16,25 @@
 (global-set-key "\C-c\C-k" 'kill-region)
 
 
+;; from http://cvs.savannah.gnu.org/viewvc/emacs/emacs/lisp/misc.el?view=markup
+(defun zap-up-to-char (arg char)
+  "Kill up to, but not including ARGth occurrence of CHAR.
+Case is ignored if `case-fold-search' is non-nil in the current buffer.
+Goes backward if ARG is negative; error if CHAR not found.
+Ignores CHAR at point."
+  (interactive "p\ncZap up to char: ")
+  (let ((direction (if (>= arg 0) 1 -1)))
+    (kill-region (point)
+		 (progn
+		   (forward-char direction)
+		   (unwind-protect
+		       (search-forward (char-to-string char) nil nil arg)
+		     (backward-char direction))
+		   (point)))))
+(global-set-key "\C-\M-z" 'zap-up-to-char)
+
+
+
 (defun bf-pretty-print-xml-region (begin end)
   "Pretty format XML markup in region. You need to have nxml-mode
 http://www.emacswiki.org/cgi-bin/wiki/NxmlMode installed to do
