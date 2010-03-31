@@ -1,10 +1,10 @@
 ;;Use command as meta    
-(setq mac-command-modifier 'meta)
+;;(setq mac-command-modifier 'meta)
 
 
 ;;show line numbers on left side of buffers
 (global-linum-mode 1)
-(setq linum-format "   %d")
+(setq linum-format "%d   ")
 
 ;;look in vendor dir and mrmargolis dir for add ons 
 (add-to-list 'load-path (concat dotfiles-dir "/vendor"))
@@ -14,8 +14,8 @@
 (global-set-key "\C-w" 'backward-kill-word)
 (global-set-key "\C-x\C-k" 'kill-region)
 (global-set-key "\C-c\C-k" 'kill-region)
-
-
+  
+ 
 ;; from http://cvs.savannah.gnu.org/viewvc/emacs/emacs/lisp/misc.el?view=markup
 (defun zap-up-to-char (arg char)
   "Kill up to, but not including ARGth occurrence of CHAR.
@@ -70,15 +70,14 @@ by using nxml's indentation rules."
 
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/apel"))
 (load "elscreen" "ElScreen" )
-
-
 ;; create or destroy elscreens
 (global-set-key (kbd "<C-f9>"    ) 'elscreen-create)
 (global-set-key (kbd "M-<f9>"  ) 'elscreen-kill)  
-
 ;; switching between elscreens
-(global-set-key (kbd "<M-S-left>") 'elscreen-previous) 
-(global-set-key (kbd "<M-S-right>")  'elscreen-next) 
+(global-set-key (kbd "<s-S-left>") 'elscreen-previous) 
+(global-set-key (kbd "<s-S-right>")  'elscreen-next) 
+(global-set-key (kbd "s-{") 'elscreen-previous) 
+(global-set-key (kbd "s-}")  'elscreen-next) 
 
 
 ;;eproject config
@@ -100,3 +99,12 @@ by using nxml's indentation rules."
 (yas/initialize)
 (yas/load-directory "~/.emacs.d/vendor/yasnippet/snippets")
 
+;;haml and sass support
+(require 'haml-mode)
+(require 'sass-mode)
+
+
+
+;;rinari from github/eschulte so we have everything including rinari-merb
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/rinari"))
+(require 'rinari-merb)

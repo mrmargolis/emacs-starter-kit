@@ -2,8 +2,7 @@
 ;;
 ;; Part of the Emacs Starter Kit
 
-(defvar starter-kit-packages (list 'idle-highlight
-                                   'ruby-mode
+(defvar starter-kit-packages (list 'ruby-mode
                                    'inf-ruby
                                    'css-mode
                                    'gist)
