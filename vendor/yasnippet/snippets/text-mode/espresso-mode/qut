@@ -1,0 +1,6 @@
+#name : Qunit test
+# --
+test("${1:name}", function(){
+  $0
+});
+

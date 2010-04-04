@@ -1,0 +1,11 @@
+#name : Qunit module with setup
+# --
+module("${1:name}", {
+  setup: function() {
+    $0
+  }
+});
+
+
+
+

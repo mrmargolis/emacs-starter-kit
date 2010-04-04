@@ -15,7 +15,11 @@
 (global-set-key "\C-x\C-k" 'kill-region)
 (global-set-key "\C-c\C-k" 'kill-region)
   
- 
+;;OS X style text-scale manipulations
+(global-set-key (kbd "s-=") 'text-scale-increase)
+(global-set-key (kbd "s--") 'text-scale-decrease) 
+
+
 ;; from http://cvs.savannah.gnu.org/viewvc/emacs/emacs/lisp/misc.el?view=markup
 (defun zap-up-to-char (arg char)
   "Kill up to, but not including ARGth occurrence of CHAR.
@@ -71,8 +75,8 @@ by using nxml's indentation rules."
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/apel"))
 (load "elscreen" "ElScreen" )
 ;; create or destroy elscreens
-(global-set-key (kbd "<C-f9>"    ) 'elscreen-create)
-(global-set-key (kbd "M-<f9>"  ) 'elscreen-kill)  
+(global-set-key (kbd "s-t"    ) 'elscreen-create)
+(global-set-key (kbd "s-T"  ) 'elscreen-kill)  
 ;; switching between elscreens
 (global-set-key (kbd "<s-S-left>") 'elscreen-previous) 
 (global-set-key (kbd "<s-S-right>")  'elscreen-next) 
@@ -104,7 +108,8 @@ by using nxml's indentation rules."
 (require 'sass-mode)
 
 
-
 ;;rinari from github/eschulte so we have everything including rinari-merb
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/rinari"))
 (require 'rinari-merb)
+
+

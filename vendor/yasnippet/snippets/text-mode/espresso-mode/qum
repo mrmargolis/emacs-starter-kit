@@ -1,0 +1,7 @@
+#name : Qunit module
+# --
+module("${1:name}");
+
+$0
+
+
