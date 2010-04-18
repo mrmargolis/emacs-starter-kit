@@ -92,7 +92,7 @@ by using nxml's indentation rules."
 
  (define-project-type merb-or-rails (generic)
    (look-for "app")
-   :relevant-files ("\\.rb$" "\\.yml$" "\\.html$" "\\Rakefile$" "\\.feature$" "\\.sass$" "\\.js$"))
+   :relevant-files ("\\.rb$" "\\.yml$" "\\.html$" "\\.erb$" "\\.haml$" "\\Rakefile$" "\\.feature$" "\\.sass$" "\\.js$"))
 
 (global-set-key "\C-c\C-p" 'eproject-revisit-project)
 
