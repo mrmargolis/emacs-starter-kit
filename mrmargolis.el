@@ -35,7 +35,8 @@ Ignores CHAR at point."
 		       (search-forward (char-to-string char) nil nil arg)
 		     (backward-char direction))
 		   (point)))))
-(global-set-key "\C-\M-z" 'zap-up-to-char)
+;; I prefer deleting up to the char
+(global-set-key "\M-z" 'zap-up-to-char)
 
 
 
@@ -110,6 +111,11 @@ by using nxml's indentation rules."
 
 ;;rinari from github/eschulte so we have everything including rinari-merb
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/rinari"))
-(require 'rinari-merb)
+(require 'rinari)
 
 
+;;use ssh for tramp
+(setq tramp-default-method "ssh")
+
+;;for debugging emacs
+;;(setq debug-on-error t)  

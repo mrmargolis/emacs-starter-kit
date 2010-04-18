@@ -1,0 +1,6 @@
+#name : jasmine describe block
+# --
+describe("${1:name}", function(){
+  $0
+});
+

@@ -1,0 +1,7 @@
+#name : JsTestDriver console log statement
+# --
+jstestdriver.console.log("${1:msg}");
+$0
+
+
+

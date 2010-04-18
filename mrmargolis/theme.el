@@ -28,7 +28,9 @@
      (bold-italic ((t (:italic t :bold t)))) 
      (fringe ((t (:background "black")))) 
      (font-lock-builtin-face ((t (:foreground "#aaccff")))) 
-     (font-lock-comment-face ((t (:italic t :foreground "#9933cc")))) 
+     (font-lock-comment-face ((t (:italic t :foreground "#ff86ff"))))
+;;   (font-lock-comment-face ((t (:italic t :foreground "#9933cc")))) 
+
      (font-lock-comment-delimiter-face ((t (:foreground "#9933cc")))) 
      (font-lock-constant-face ((t (:foreground "#339999")))) 
      (font-lock-function-name-face ((t (:foreground "#ffcc00")))) 

@@ -1,0 +1,5 @@
+#name : jasmine it block
+# --
+it("${1:name}", function(){
+  $0
+});
