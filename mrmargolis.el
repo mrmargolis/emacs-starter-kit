@@ -77,7 +77,7 @@ by using nxml's indentation rules."
 (load "elscreen" "ElScreen" )
 ;; create or destroy elscreens
 (global-set-key (kbd "s-t"    ) 'elscreen-create)
-(global-set-key (kbd "s-T"  ) 'elscreen-kill)  
+(global-set-key (kbd "s-w"  ) 'elscreen-kill)  
 ;; switching between elscreens
 (global-set-key (kbd "<s-S-left>") 'elscreen-previous) 
 (global-set-key (kbd "<s-S-right>")  'elscreen-next) 
@@ -109,7 +109,7 @@ by using nxml's indentation rules."
 (require 'sass-mode)
 
 
-;;rinari from github/eschulte so we have everything including rinari-merb
+;;rinari from github/eschulte so we have newer stuff
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/rinari"))
 (require 'rinari)
 
@@ -119,3 +119,6 @@ by using nxml's indentation rules."
 
 ;;for debugging emacs
 ;;(setq debug-on-error t)  
+
+
+
