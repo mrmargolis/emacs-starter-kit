@@ -1,0 +1,6 @@
+#name : describe rspec
+#group : definitions
+# --
+describe "${1:string}" do
+  $0
+end

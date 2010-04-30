@@ -1,3 +1,6 @@
 [submodule "vendor/eproject"]
 	path = vendor/eproject
 	url =  git://github.com/jrockway/eproject.git
+[submodule "vendor/rhtml"]
+	path = vendor/rhtml
+	url = http://github.com/eschulte/rhtml.git
