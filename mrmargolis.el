@@ -1,3 +1,4 @@
+
 ;;Use command as meta    
 ;;(setq mac-command-modifier 'meta)
 
@@ -112,7 +113,11 @@ by using nxml's indentation rules."
 ;;rinari from github/eschulte so we have newer stuff
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/rinari"))
 (require 'rinari)
-
+;;try out rhtml mode for rails views instead of nxhtml
+(add-to-list 'load-path (concat dotfiles-dir "vendor/rhtml"))
+(require 'rhtml-mode)
+(add-hook 'rhtml-mode-hook
+     	  (lambda () (rinari-launch)))
 
 ;;use ssh for tramp
 (setq tramp-default-method "ssh")
