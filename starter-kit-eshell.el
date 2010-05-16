@@ -19,7 +19,7 @@
        (add-to-list 'eshell-output-filter-functions 'eshell-handle-ansi-color))
 
      ;; TODO: submit these via M-x report-emacs-bug
-     (add-to-list 'eshell-visual-commands "ssh")
+;;     (add-to-list 'eshell-visual-commands "ssh")
      (add-to-list 'eshell-visual-commands "tail")
      (add-to-list 'eshell-command-completions-alist
                   '("gunzip" "gz\\'"))

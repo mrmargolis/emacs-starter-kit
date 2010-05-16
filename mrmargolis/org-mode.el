@@ -10,10 +10,11 @@
 (setq org-directory "~/Dropbox/org")
 (setq org-mobile-directory "/Volumes/org/")
 (setq org-mobile-inbox-for-pull "~/Dropbox/org/inbox.org")
-;; Standard key bindings
-(global-set-key "\C-cl" 'org-store-link)
-(global-set-key "\C-ca" 'org-agenda)
-(global-set-key "\C-cb" 'org-iswitchb)    
+
+;; ;; Standard key bindings
+;; (global-set-key "\C-cl" 'org-store-link)
+;; (global-set-key "\C-ca" 'org-agenda)
+;; (global-set-key "\C-cb" 'org-iswitchb)    
 ; Use IDO for target completion
 (setq org-completion-use-ido t)
 ; Targets include this file and any file contributing to the agenda - up to 5 levels deep
@@ -31,7 +32,7 @@
 (org-remember-insinuate)
 
 ;; I use C-M-r to start org-remember
-(global-set-key (kbd "C-M-r") 'org-remember)
+;;; (global-set-key (kbd "C-M-r") 'org-remember)
 
 ;; C-c C-c stores the note immediately
 (setq org-remember-store-without-prompt t)

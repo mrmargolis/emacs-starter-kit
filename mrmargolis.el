@@ -118,12 +118,22 @@ by using nxml's indentation rules."
 (require 'rhtml-mode)
 (add-hook 'rhtml-mode-hook
      	  (lambda () (rinari-launch)))
+(add-hook 'rhtml-mode-hook
+     	  (lambda () (setq tab-width 2)))
+
 
 ;;use ssh for tramp
 (setq tramp-default-method "ssh")
+
+;;browse kill ring with M-y
+(when (require 'browse-kill-ring nil 'noerror)
+  (browse-kill-ring-default-keybindings))
 
 ;;for debugging emacs
 ;;(setq debug-on-error t)  
 
 
-
+;; spit out an org mode template for a Yesterday/Today status update
+;; for standups
+(fset 'status-template
+   [M-return ?\C-x ?\C-m ?i ?n ?s ?e ?r ?t ?  ?d ?a ?t ?e return return ?* ?* ?  ?Y ?e ?s ?t ?e ?r ?d ?a ?y return ?* ?* ?  ?T ?o ?d ?a ?y])
