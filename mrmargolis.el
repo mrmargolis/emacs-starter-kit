@@ -135,5 +135,23 @@ by using nxml's indentation rules."
 
 ;; spit out an org mode template for a Yesterday/Today status update
 ;; for standups
-(fset 'status-template
+(fset 'standup-template
    [M-return ?\C-x ?\C-m ?i ?n ?s ?e ?r ?t ?  ?d ?a ?t ?e return return ?* ?* ?  ?Y ?e ?s ?t ?e ?r ?d ?a ?y return ?* ?* ?  ?T ?o ?d ?a ?y])
+
+
+(require 'rvm)
+(rvm-use-default) ;; use rvm’s default ruby for the current Emacs
+;; session
+
+;;make tags file for rails/merb project with rinari mode active
+(defun build-rails-tags ()
+  "build ctags for the current project"
+  (interactive)
+  (cd (rinari-root))
+  (compile "ctags -a -e -f TAGS --tag-relative -R app lib vendor"))
+
+
+;; spaces should be inserted to rep the tabs
+(setq tab-width 2)
+
+
